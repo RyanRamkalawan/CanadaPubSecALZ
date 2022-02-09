@@ -22,8 +22,8 @@
 
 variables:
   # Management Groups
-  var-parentManagementGroupId: RyansManagmentGroup
-  var-topLevelManagementGroupName: RyansManagmentGroup
+  var-parentManagementGroupId: e855b643-b281-4b62-8f70-2a1499b25a70
+  var-topLevelManagementGroupName: Tenant Root Group
 
   # Logging
   var-logging-managementGroupId: pubsecPlatformManagement
