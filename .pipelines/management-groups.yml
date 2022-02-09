@@ -24,7 +24,7 @@ variables:
 - name: devops-org-name
   value: ${{ replace(replace(variables['System.CollectionUri'], 'https://dev.azure.com/' , ''), '/', '') }}
 - name: variable-template-file
-  value: ${{ variables['devops-org-name'] }}-${{ variables['Build.SourceBranchName'] }}.yml
+  value: ${{ variables['devops-org-name'] }}-main.yml
 - template: ../config/variables/common.yml
 - template: ../config/variables/${{ variables['variable-template-file'] }}
 
@@ -40,7 +40,7 @@ stages:
 
   - deployment: DeployManagementGroupsJob
     displayName: Deploy Management Groups Job
-    environment: ${{ variables['Build.SourceBranchName'] }}
+    environment: main
     strategy:
       runOnce:
         deploy:
