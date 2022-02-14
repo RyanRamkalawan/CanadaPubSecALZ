@@ -28,7 +28,8 @@ variables:
 - template: ../config/variables/common.yml
 - template: ../config/variables/${{ variables['variable-template-file'] }}
 
-pool: RyansLocalAgent
+pool: 
+  vmImage: $[ variables.vmImage ]
   
 stages:
 
